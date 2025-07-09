@@ -156,3 +156,7 @@ class Author(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
+    
+    def full_name(self):
+        """Returns the author's full name."""
+        return f"{self.first_name} {self.last_name}"
