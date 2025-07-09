@@ -156,3 +156,9 @@ class Author(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.last_name}, {self.first_name}'
+    
+    def lifespan(self):
+        """Returns a string showing the author's lifespan (e.g. 1947 - 2020 or 1947 - )."""
+        birth = self.date_of_birth.strftime('%Y') if self.date_of_birth else ''
+        death = self.date_of_death.strftime('%Y') if self.date_of_death else ''
+        return f"{birth} - {death}" if (birth or death) else ""

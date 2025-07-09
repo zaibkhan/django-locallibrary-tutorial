@@ -37,3 +37,8 @@ To get this project up and running locally on your computer:
 1. Open a browser to `http://127.0.0.1:8000/admin/` to open the admin site
 1. Create a few test objects of each type.
 1. Open tab to `http://127.0.0.1:8000` to see the main site, with your new objects.
+
+## New in this release
+
+- Added Author.lifespan() utility method to return a formatted string of an author's lifespan.
+- This is now also visible in the Django admin.
